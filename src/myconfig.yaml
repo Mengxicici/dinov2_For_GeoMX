@@ -1,0 +1,26 @@
+dino:
+  head_n_prototypes: 2048
+  head_bottleneck_dim: 768
+ibot:
+  separate_head: true
+  head_n_prototypes: 2048
+train:
+  batch_size_per_gpu: 32
+  OFFICIAL_EPOCH_LENGTH: 1250
+  dataset_path: TiffDataset
+student:
+  arch: vit_base_CODEX
+  in_chans: 4
+  patch_size: 14
+  pretrained_weights: /archive/bioinformatics/Jamieson_lab/shared/spatial-core/K/analysis/huang/EO_AO/TMA_0622/DinoV2_root/models/dinov2_vitb14_pretrain.pth
+teacher:
+  momentum_teacher: 0.994
+optim:
+  epochs: 500
+  weight_decay_end: 0.2
+  base_lr: 1.0e-03
+  warmup_epochs: 80
+  layerwise_decay: 1.0
+crops:
+  global_crops_size: 224
+  local_crops_size: 98

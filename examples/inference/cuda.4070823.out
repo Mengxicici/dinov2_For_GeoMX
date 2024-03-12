@@ -1,0 +1,15 @@
+START!
+Traceback (most recent call last):
+  File "/endosome/work/bioinformatics/s217053/DINO/DINOv2/Spatial_Biology_Project-kate/examples/inference/example_08_run_dinov2_inference_tiff_only_batches.py", line 328, in <module>
+    if __name__ == '__main__':
+  File "/endosome/work/bioinformatics/s217053/DINO/DINOv2/Spatial_Biology_Project-kate/examples/inference/example_08_run_dinov2_inference_tiff_only_batches.py", line 222, in main
+    #model.load_state_dict(model_state_dict)
+  File "/archive/bioinformatics/Jamieson_lab/shared/dinov2_virtual_envs/envs/py39-cu117/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2041, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for DinoVisionTransformer:
+	size mismatch for cls_token: copying a param with shape torch.Size([1, 1, 384]) from checkpoint, the shape in current model is torch.Size([1, 1, 768]).
+	size mismatch for pos_embed: copying a param with shape torch.Size([1, 197, 384]) from checkpoint, the shape in current model is torch.Size([1, 257, 768]).
+	size mismatch for patch_embed.proj.weight: copying a param with shape torch.Size([384, 5, 16, 16]) from checkpoint, the shape in current model is torch.Size([768, 4, 14, 14]).
+	size mismatch for patch_embed.proj.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for norm.weight: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([768]).
+	size mismatch for norm.bias: copying a param with shape torch.Size([384]) from checkpoint, the shape in current model is torch.Size([768]).
